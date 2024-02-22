@@ -47,7 +47,7 @@ else
     ./dist/proot -S . /bin/bash -c "apt-get -y install neofetch"
     ./dist/proot -S . /bin/bash -c "apt update && apt upgrade -y && apt install curl sudo dropbear python3 -y"
     ./dist/proot -S . /bin/bash -c "service dropbear start"
-    ./dist/proot -S . /bin/bash -c "dropbear p 8491"
+    ./dist/proot -S . /bin/bash -c "dropbear p {{server.build.default.port}}"
     echo "Starting PteroVM"
     ./dist/proot -S . /bin/bash --login
 fi
